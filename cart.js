@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             message += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
         });
         message += `\nTotal: R$ ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}`;
-        const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/558487704819?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");
     });
 });
