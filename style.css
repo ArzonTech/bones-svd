@@ -2,6 +2,65 @@ html {
     scroll-behavior: smooth;
 }
 
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.quantity-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    outline: none;
+}
+
+.quantity-input:focus {
+    border-color: #FF69B4;
+}
+
+
+.promo-section {
+    background: var(--color-brown); /* Mantendo a consistência das cores do site */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+.promo-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.promo-section p {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.promo-section .highlight {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700; /* Dourado para destacar o preço */
+}
+
+
 /* Reset e Estilos Base */
 * {
     margin: 0;
