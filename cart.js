@@ -1,3 +1,5 @@
+// Atualização do cart.js para aplicar promoções com base na quantidade
+
 document.addEventListener("DOMContentLoaded", () => {
     const cart = [];
     const cartBtn = document.querySelector(".cart-btn");
@@ -27,30 +29,27 @@ document.addEventListener("DOMContentLoaded", () => {
     cartOverlay.style.justifyContent = "center";
     cartOverlay.style.alignItems = "center";
     
-    const cartContainer = cartOverlay.querySelector(".cart");
-    cartContainer.style.background = "white";
-    cartContainer.style.padding = "20px";
-    cartContainer.style.borderRadius = "10px";
-    cartContainer.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
-    cartContainer.style.width = "350px";
-    cartContainer.style.textAlign = "center";
-    
     const cartItemsList = cartOverlay.querySelector(".cart-items");
     const cartTotal = cartOverlay.querySelector(".cart-total");
     const checkoutBtn = cartOverlay.querySelector(".checkout-btn");
     const closeCartBtn = cartOverlay.querySelector(".close-cart");
     
-    document.querySelectorAll(".buy-button").forEach(button => {
-        button.addEventListener("click", (e) => {
-            const productCard = e.target.closest(".product-card");
+    document.querySelectorAll(".product-card").forEach(productCard => {
+        const buyButton = productCard.querySelector(".buy-button");
+        const quantityInput = productCard.querySelector(".quantity-input");
+        
+        if (!buyButton || !quantityInput) return;
+        
+        buyButton.addEventListener("click", () => {
             const name = productCard.dataset.name || productCard.querySelector("h3").innerText;
-            const price = parseFloat(productCard.dataset.price || productCard.querySelector(".price").innerText.replace("R$ ", "").replace(",", "."));
+            let price = parseFloat(productCard.dataset.price || productCard.querySelector(".price").innerText.replace("R$ ", "").replace(",", "."));
+            const quantity = parseInt(quantityInput.value) || 1;
             
             const existingItem = cart.find(item => item.name === name);
             if (existingItem) {
-                existingItem.quantity += 1;
+                existingItem.quantity += quantity;
             } else {
-                cart.push({ name, price, quantity: 1 });
+                cart.push({ name, price, quantity });
             }
             updateCart();
         });
@@ -67,16 +66,30 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateCart() {
         cartItemsList.innerHTML = "";
         let total = 0;
+        let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+        
         cart.forEach((item, index) => {
-            total += item.price * item.quantity;
+            let itemPrice = item.price;
+            
+            // Aplicação de descontos com base na quantidade total de bonés
+            if (totalQuantity === 2) {
+                itemPrice = 49.95;
+            } else if (totalQuantity >= 3) {
+                itemPrice = 46.66;
+            }
+            
+            let itemTotal = itemPrice * item.quantity;
+            total += itemTotal;
+            
             cartItemsList.innerHTML += `
                 <li style="list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #ddd;">
                     <span>${item.name} x${item.quantity}</span>
-                    <span>R$ ${(item.price * item.quantity).toFixed(2)}</span>
+                    <span>R$ ${itemTotal.toFixed(2)}</span>
                     <button class="remove-item" data-index="${index}" style="background: none; border: none; color: red; font-size: 16px; cursor: pointer;">❌</button>
                 </li>
             `;
         });
+        
         cartTotal.innerText = `Total: R$ ${total.toFixed(2)}`;
         document.querySelector(".cart-count").innerText = cart.length;
         addRemoveEventListeners();
