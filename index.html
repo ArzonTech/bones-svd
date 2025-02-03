@@ -1,262 +1,285 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonés SVD 2025 - Bonés Exclusivos</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <nav class="nav-container">
-            <h1>Seu Boné SVD</h1>
-            <div class="nav-links">
-                <a href="#produtos">Produtos</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#avaliacoes">Avaliações</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <button class="cart-btn" onclick="toggleCart()">
-                <span class="cart-count">0</span> 🛒
-            </button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Edição Limitada SVD 2025</h1>
-            <p>Bonés exclusivos que contam histórias</p>
-            <a href="#produtos"><button class="cta-button">Conferir Bonés</button></a>
-            
-        </div>
-    </section>
-
-
-    <section id="produtos" class="products">
-        <h2>Coleção Exclusiva</h2>
-        <div class="product-grid">
-            <div class="product-card" data-name="Boné Rocas Marrom" data-price="59.90">
-                <div class="product-image brown">
-                    <img src="imagens/marrom.jpg" alt="Boné Marrom">
-                    <span class="limited-tag">Edição Limitada</span>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bonés SVD 2025 - Bonés Exclusivos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav-container">
+                <h1>Seu Boné SVD</h1>
+                <div class="nav-links">
+                    <a href="#produtos">Produtos</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#avaliacoes">Avaliações</a>
+                    <a href="#faq">FAQ</a>
                 </div>
-                <div class="product-info">
-                    <h3>Boné Rocas Marrom</h3>
-                    <p class="price">R$ 59,90</p>
-                    <div class="stock-info">
-                        <div class="stock-bar">
-                            <div class="stock-level" style="width: 75%"></div>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <span class="cart-count">0</span> 🛒
+                </button>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Edição Limitada SVD 2025</h1>
+                <p>Bonés exclusivos que contam histórias</p>
+                <a href="#produtos"><button class="cta-button">Conferir Bonés</button></a>
+                
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <h2>🔥 Promoção Especial 🔥</h2>
+            <p>Leve <strong>2 bonés</strong> e pague apenas <span class="highlight">R$ 49,95</span> cada!</p>
+            <p>Leve <strong>3 ou mais bonés</strong> e pague apenas <span class="highlight">R$ 46,66</span> cada!</p>
+            <p>Aproveite essa oferta por tempo limitado! ⏳</p>
+        </section>
+        
+
+        <section id="produtos" class="products">
+            <h2>Coleção Exclusiva</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="Boné Rocas Marrom" data-price="59.90">
+                    <div class="product-image brown">
+                        <img src="imagens/marrom.jpg" alt="Boné Marrom">
+                        <span class="limited-tag">Edição Limitada</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Boné Rocas Marrom</h3>
+                        <p class="price">R$ 59,90</p>
+                        <div class="stock-info">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 75%"></div>
+                            </div>
+                            <p>Restam apenas 25 unidades</p>
                         </div>
-                        <p>Restam apenas 25 unidades</p>
-                    </div>
-                    <button class="buy-button">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image white">
-                    <img src="imagens/branco.jpg" alt="Boné Branco">
-                    <span class="limited-tag">Edição Limitada</span>
-                </div>
-                <div class="product-info">
-                    <h3>Boné Rocas Branco</h3>
-                    <p class="price">R$ 59,90</p>
-                    <div class="stock-info">
-                        <div class="stock-bar">
-                            <div class="stock-level" style="width: 85%"></div>
+                        <div class="quantity-container">
+                            <label for="quantity-marrom">Quantidade:</label>
+                            <input type="number" id="quantity-marrom" class="quantity-input" value="1" min="1">
                         </div>
-                        <p>Restam apenas 30 unidades</p>
+                        <button class="buy-button">Adicionar ao Carrinho</button>
                     </div>
-                    <button class="buy-button">Adicionar ao Carrinho</button>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image black">
-                    <img src="imagens/preto.jpg" alt="Boné Preto">
-                    <span class="limited-tag">Edição Limitada</span>
-                </div>
-                <div class="product-info">
-                    <h3>Boné Rocas Preto</h3>
-                    <p class="price">R$ 59,90</p>
-                    <div class="stock-info">
-                        <div class="stock-bar">
-                            <div class="stock-level" style="width: 65%"></div>
+                <div class="product-card">
+                    <div class="product-image white">
+                        <img src="imagens/branco.jpg" alt="Boné Branco">
+                        <span class="limited-tag">Edição Limitada</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Boné Rocas Branco</h3>
+                        <p class="price">R$ 59,90</p>
+                        <div class="stock-info">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 85%"></div>
+                            </div>
+                            <p>Restam apenas 30 unidades</p>
                         </div>
-                        <p>Restam apenas 30 unidades</p>
-                    </div>
-                    <button class="buy-button">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image pink">
-                    <img src="imagens/rosa.jpg" alt="Boné Rosa">
-                    <span class="limited-tag">Edição Limitada</span>
-                </div>
-                <div class="product-info">
-                    <h3>Boné Rocas Rosa</h3>
-                    <p class="price">R$ 59,90</p>
-                    <div class="stock-info">
-                        <div class="stock-bar">
-                            <div class="stock-level" style="width: 45%"></div>
+                        <div class="quantity-container">
+                            <label for="quantity-marrom">Quantidade:</label>
+                            <input type="number" id="quantity-marrom" class="quantity-input" value="1" min="1">
                         </div>
-                        <p>Últimas 25 unidades!</p>
-                    </div>
-                    <button class="buy-button">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <section class="features" id="sobre">
-        <div class="feature">
-            <span class="icon">🚚</span>
-            <h3>Frete Grátis</h3>
-            <p>Natal e Parnamirim</p>
-        </div>
-        <div class="feature">
-            <span class="icon">⭐</span>
-            <h3>Qualidade Premium</h3>
-            <p>Materiais selecionados</p>
-        </div>
-        <div class="feature">
-            <span class="icon">🔒</span>
-            <h3>Compra Segura</h3>
-            <p>Pagamento protegido</p>
-        </div>
-    </section>
-
-    <section class="banner">
-        <div class="banner-content">
-            <h2>Edição Especial SVD 2025</h2>
-            <p>Cada boné conta uma história única do maior festival cultural do ano</p>
-            <button class="cta-button">Garanta o Seu</button>
-        </div>
-    </section>
-
-    <section id="avaliacoes" class="reviews">
-        <h2>O Que Dizem Nossos Clientes</h2>
-        <div class="review-grid">
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"O melhor boné que já comprei! A qualidade é excepcional e o design é único."</p>
-                <div class="reviewer">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100" alt="Cliente">
-                    <div>
-                        <h4>João Silva</h4>
-                        <p>Cliente Verificado ✓</p>
+                        <button class="buy-button">Adicionar ao Carrinho</button>
                     </div>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Design incrível e acabamento perfeito. Já comprei todos os modelos!"</p>
-                <div class="reviewer">
-                    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100" alt="Cliente">
-                    <div>
-                        <h4>Pedro Costa</h4>
-                        <p>Cliente Verificado ✓</p>
+
+                <div class="product-card">
+                    <div class="product-image black">
+                        <img src="imagens/preto.jpg" alt="Boné Preto">
+                        <span class="limited-tag">Edição Limitada</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Boné Rocas Preto</h3>
+                        <p class="price">R$ 59,90</p>
+                        <div class="stock-info">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 65%"></div>
+                            </div>
+                            <p>Restam apenas 30 unidades</p>
+                        </div>
+                        <div class="quantity-container">
+                            <label for="quantity-marrom">Quantidade:</label>
+                            <input type="number" id="quantity-marrom" class="quantity-input" value="1" min="1">
+                        </div>
+                        <button class="buy-button">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image pink">
+                        <img src="imagens/rosa.jpg" alt="Boné Rosa">
+                        <span class="limited-tag">Edição Limitada</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Boné Rocas Rosa</h3>
+                        <p class="price">R$ 59,90</p>
+                        <div class="stock-info">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 45%"></div>
+                            </div>
+                            <p>Últimas 25 unidades!</p>
+                        </div>
+                        <div class="quantity-container">
+                            <label for="quantity-marrom">Quantidade:</label>
+                            <input type="number" id="quantity-marrom" class="quantity-input" value="1" min="1">
+                        </div>
+                        <button class="buy-button">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="galeria" class="gallery-section">
-        <h2>Se destaque e marque sua presença</h2>
-        <div class="gallery-grid">
-          <img src="imagens/1.jpg" alt="Foto do Festival">
-          <img src="imagens/2.jpg" alt="Foto do Festival">
-          <img src="imagens/3.jpg" alt="Foto do Festival">
-          <img src="imagens/4.jpg" alt="Foto do Festival">
-          <img src="imagens/5.jpg" alt="Foto do Festival">
-          <img src="imagens/6.jpg" alt="Foto do Festival">
-        </div>
-      </section>
+        <section class="features" id="sobre">
+            <div class="feature">
+                <span class="icon">🚚</span>
+                <h3>Frete Grátis</h3>
+                <p>Natal e Parnamirim</p>
+            </div>
+            <div class="feature">
+                <span class="icon">⭐</span>
+                <h3>Qualidade Premium</h3>
+                <p>Materiais selecionados</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🔒</span>
+                <h3>Compra Segura</h3>
+                <p>Pagamento protegido</p>
+            </div>
+        </section>
 
-    <section id="faq" class="faq">
-        <h2>Perguntas Frequentes</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h3>Qual o prazo de entrega?</h3>
-                <p>Entregamos para todo o Brasil em até 7 dias úteis.</p>
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Edição Especial SVD 2025</h2>
+                <p>Cada boné conta uma história única do maior festival cultural do ano</p>
+                <button class="cta-button">Garanta o Seu</button>
             </div>
-            <div class="faq-item">
-                <h3>Os bonés são ajustáveis?</h3>
-                <p>Sim, todos os modelos possuem regulagem para melhor ajuste.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Qual o material dos bonés?</h3>
-                <p>Utilizamos algodão premium e fechos de alta qualidade.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Posso trocar se não gostar?</h3>
-                <p>Sim, oferecemos 30 dias de garantia de satisfação.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="newsletter">
-        <div class="newsletter-content">
-            <h2>Fique por Dentro das Novidades</h2>
-            <p>Receba ofertas exclusivas e seja o primeiro a saber sobre novos lançamentos</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Seu melhor e-mail">
-                <button type="submit">Inscrever</button>
-            </form>
-        </div>
-    </section>
+        <section id="avaliacoes" class="reviews">
+            <h2>O Que Dizem Nossos Clientes</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"O melhor boné que já comprei! A qualidade é excepcional e o design é único."</p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100" alt="Cliente">
+                        <div>
+                            <h4>João Silva</h4>
+                            <p>Cliente Verificado ✓</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Design incrível e acabamento perfeito. Já comprei todos os modelos!"</p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100" alt="Cliente">
+                        <div>
+                            <h4>Pedro Costa</h4>
+                            <p>Cliente Verificado ✓</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>SDV 2025</h3>
-                <p>O maior festival cultural do ano com edição limitada de bonés exclusivos.</p>
+        <section id="galeria" class="gallery-section">
+            <h2>Se destaque e marque sua presença</h2>
+            <div class="gallery-grid">
+            <img src="imagens/1.jpg" alt="Foto do Festival">
+            <img src="imagens/2.jpg" alt="Foto do Festival">
+            <img src="imagens/3.jpg" alt="Foto do Festival">
+            <img src="imagens/4.jpg" alt="Foto do Festival">
+            <img src="imagens/5.jpg" alt="Foto do Festival">
+            <img src="imagens/6.jpg" alt="Foto do Festival">
             </div>
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <p>Celular: 558487704819</p>
-            </div>
-            <div class="footer-section">
-                <h3>Links Rápidos</h3>
-                <a href="#produtos">Produtos</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#avaliacoes">Avaliações</a>
-                <a href="#faq">FAQ</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 CGauer. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        </section>
 
-    <!-- Carrinho de Compras -->
-<div class="cart-overlay">
-    <div class="cart">
-      <h2 class="cart-title">🛍️ Seu Carrinho</h2>
-      <ul class="cart-items"></ul>
-      <p class="cart-total">Total: R$ 0,00</p>
-      <div class="cart-buttons">
-        <button class="checkout-btn">Finalizar Compra ✅</button>
-        <button class="close-cart">❌ Fechar</button>
-      </div>
+        <section id="faq" class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Qual o prazo de entrega?</h3>
+                    <p>Entregamos para todo o Brasil em até 7 dias úteis.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Os bonés são ajustáveis?</h3>
+                    <p>Sim, todos os modelos possuem regulagem para melhor ajuste.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Qual o material dos bonés?</h3>
+                    <p>Utilizamos algodão premium e fechos de alta qualidade.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Posso trocar se não gostar?</h3>
+                    <p>Sim, oferecemos 30 dias de garantia de satisfação.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Fique por Dentro das Novidades</h2>
+                <p>Receba ofertas exclusivas e seja o primeiro a saber sobre novos lançamentos</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SDV 2025</h3>
+                    <p>O maior festival cultural do ano com edição limitada de bonés exclusivos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Celular: 558487704819</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <a href="#produtos">Produtos</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#avaliacoes">Avaliações</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CGauer. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Carrinho de Compras -->
+    <div class="cart-overlay">
+        <div class="cart">
+        <h2 class="cart-title">🛍️ Seu Carrinho</h2>
+        <ul class="cart-items"></ul>
+        <p class="cart-total">Total: R$ 0,00</p>
+        <div class="cart-buttons">
+            <button class="checkout-btn">Finalizar Compra ✅</button>
+            <button class="close-cart">❌ Fechar</button>
+        </div>
+        </div>
     </div>
-  </div>
 
-    <script src="cart.js"></script>
-    <script>
-        document.querySelectorAll('.gallery-grid img').forEach(img => {
-  img.addEventListener('click', () => {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'flex';
-    lightbox.querySelector('img').src = img.src;
-  });
-});
+        <script src="cart.js"></script>
+        <script>
+            document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'flex';
+        lightbox.querySelector('img').src = img.src;
+    });
+    });
 
-document.getElementById('lightbox').addEventListener('click', () => {
-  document.getElementById('lightbox').style.display = 'none';
-});
-    </script>
-</body>
-</html>
+    document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+    });
+        </script>
+    </body>
+    </html>
